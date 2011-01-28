@@ -1,8 +1,8 @@
 %{!?ruby_sitelib: %global ruby_sitelib %(ruby -rrbconfig -e 'puts Config::CONFIG["sitelibdir"] ')}
 %{!?ruby_sitearch: %global ruby_sitearch %(ruby -rrbconfig -e 'puts Config::CONFIG["sitearchdir"] ')}
-%define gemdir %(ruby -rubygems -e 'puts Gem::dir' 2>/dev/null)
-%define gemname acts_as_audited
-%define geminstdir %{gemdir}/gems/%{gemname}-%{version}
+%global gemdir %(ruby -rubygems -e 'puts Gem::dir' 2>/dev/null)
+%global gemname acts_as_audited
+%global geminstdir %{gemdir}/gems/%{gemname}-%{version}
 
 Summary: ActiveRecord extension that logs all changes to your models in an audits table
 Name: rubygem-%{gemname}
