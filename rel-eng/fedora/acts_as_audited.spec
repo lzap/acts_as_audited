@@ -13,10 +13,11 @@ License: GPLv2+ or Ruby
 URL: http://github.com/collectiveidea/acts_as_audited
 Source0: http://rubygems.org/gems/%{gemname}-%{version}.gem
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+Requires: ruby(abi) = 1.8
 Requires: rubygems
 Requires: rubygem(activerecord) >= 2.1
-Requires: rubygem(thoughtbot-shoulda) >= 0
-Requires: rubygem(jnunemaker-matchy) >= 0
+BuildRequires: rubygem(thoughtbot-shoulda) >= 0
+BuildRequires: rubygem(jnunemaker-matchy) >= 0
 BuildRequires: rubygems
 BuildArch: noarch
 Provides: rubygem(%{gemname}) = %{version}
