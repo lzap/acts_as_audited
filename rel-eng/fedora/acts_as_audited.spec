@@ -26,10 +26,6 @@ Provides: rubygem(%{gemname}) = %{version}
 ActiveRecord extension that logs all changes to your models in an audits table
 
 
-%prep
-
-%build
-
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}%{gemdir}
