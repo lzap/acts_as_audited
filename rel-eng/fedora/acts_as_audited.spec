@@ -37,7 +37,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root, -)
-%{gemdir}/gems/%{gemname}-%{version}/
+%{geminstdir}/
 %doc %{gemdir}/doc/%{gemname}-%{version}
 %doc %{geminstdir}/LICENSE
 %doc %{geminstdir}/README
