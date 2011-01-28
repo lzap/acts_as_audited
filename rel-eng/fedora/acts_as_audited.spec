@@ -12,14 +12,19 @@ Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://github.com/collectiveidea/acts_as_audited
 Source0: http://rubygems.org/gems/%{gemname}-%{version}.gem
+
+BuildArch: noarch
+
 Requires: ruby(abi) = 1.8
 Requires: rubygems
 Requires: rubygem(activerecord) >= 2.1
+
 BuildRequires: rubygem(thoughtbot-shoulda) >= 0
 BuildRequires: rubygem(jnunemaker-matchy) >= 0
 BuildRequires: rubygems
-BuildArch: noarch
+
 Provides: rubygem(%{gemname}) = %{version}
+
 
 %description
 ActiveRecord extension that logs all changes to your models in an audits table
@@ -30,6 +35,7 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}%{gemdir}
 gem install --local --install-dir %{buildroot}%{gemdir} \
             --force --rdoc %{SOURCE0}
+
 
 %files
 %defattr(-, root, root, -)
@@ -42,5 +48,5 @@ gem install --local --install-dir %{buildroot}%{gemdir} \
 
 
 %changelog
-* Fri Jan 28 2011 Lukáš Zapletal <lzap@lzapx.brq.redhat.com> - 1.1.1-1
+* Fri Jan 28 2011 Lukas Zapletal <lzap+rpm@redhat.com> - 1.1.1-1
 - Initial package
