@@ -9,7 +9,7 @@ Name: rubygem-%{gemname}
 Version: 1.1.1
 Release: 1%{?dist}
 Group: Development/Languages
-License: GPLv2+ or Ruby
+License: MIT
 URL: http://github.com/collectiveidea/acts_as_audited
 Source0: http://rubygems.org/gems/%{gemname}-%{version}.gem
 
@@ -19,8 +19,8 @@ Requires: ruby(abi) = 1.8
 Requires: rubygems
 Requires: rubygem(activerecord) >= 2.1
 
-BuildRequires: rubygem(thoughtbot-shoulda) >= 0
-BuildRequires: rubygem(jnunemaker-matchy) >= 0
+BuildRequires: rubygem(shoulda) >= 2.11.3
+BuildRequires: rubygem(jnunemaker-matchy) >= 0.4.0
 BuildRequires: rubygems
 
 Provides: rubygem(%{gemname}) = %{version}
