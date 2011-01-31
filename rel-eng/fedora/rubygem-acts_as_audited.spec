@@ -36,6 +36,9 @@ mkdir -p %{buildroot}%{gemdir}
 gem install --local --install-dir %{buildroot}%{gemdir} \
             --force --rdoc %{SOURCE0}
 
+# there are some .gitignore files being distributed
+find %{buildroot}/ -name .gitignore -print0 | xargs -0 /bin/rm -f
+
 
 %files
 %defattr(-, root, root, -)
