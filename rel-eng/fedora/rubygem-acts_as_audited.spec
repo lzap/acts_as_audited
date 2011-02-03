@@ -13,6 +13,9 @@ License: MIT
 URL: http://github.com/collectiveidea/acts_as_audited
 Source0: http://rubygems.org/gems/%{gemname}-%{version}.gem
 
+# This spec needs RHEL5 compatibility
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+
 BuildArch: noarch
 
 Requires: ruby(abi) = 1.8
@@ -28,6 +31,11 @@ Provides: rubygem(%{gemname}) = %{version}
 
 %description
 ActiveRecord extension that logs all changes to your models in an audits table
+
+
+# This spec needs RHEL5 compatibility
+%clean
+rm -rf %{buildroot}
 
 
 %install
